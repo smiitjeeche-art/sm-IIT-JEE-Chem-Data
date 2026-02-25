@@ -20,7 +20,13 @@ body { display:flex; height:100vh; overflow:hidden; }
   flex:1;
   background: url("https://i.ibb.co/RTjxjG88/class12.jpg") no-repeat center center;
   background-size: cover;
-  overflow-y:auto !important;
+  
+  
+  
+  overflow-y:auto;
+  
+  
+  
   overflow-x:hidden;
   position:relative;
   display:flex;
@@ -126,6 +132,92 @@ body { display:flex; height:100vh; overflow:hidden; }
   0% { box-shadow:0 0 8px #ffae00, 0 0 16px #ffae00; }
   100% { box-shadow:0 0 16px #ff3399, 0 0 32px #ff3399; }
 }
+
+
+
+
+
+
+/* ===== BUY HARD COPY POPUP ===== */
+#buyPopupOverlay{
+  position:fixed;
+  top:0; left:0;
+  width:100vw; height:100vh;
+  background:rgba(0,0,0,0.75);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:100000;
+}
+
+#buyPopup{
+  background:#0f172a;
+  color:white;
+  padding:22px;
+  width:90%;
+  max-width:360px;
+  border-radius:14px;
+  text-align:center;
+  box-shadow:0 0 25px rgba(255,215,0,0.6);
+  animation:popupScale .35s ease;
+}
+
+#buyPopup h2{
+  color:#ffd700;
+  margin-bottom:10px;
+}
+
+#buyPopup p{
+  font-size:14px;
+  line-height:1.4;
+  margin-bottom:18px;
+}
+
+#buyPopupBtn{
+  display:block;
+  background:#80030f;
+  color:white;
+  padding:12px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 10px #ffae00;
+  margin-bottom:12px;
+}
+
+#closePopup{
+  background:none;
+  border:none;
+  color:#94a3b8;
+  font-size:13px;
+  cursor:pointer;
+}
+
+@keyframes popupScale{
+  from{ transform:scale(.85); opacity:0 }
+  to{ transform:scale(1); opacity:1 }
+}
+
+	
+	
+	
+#viewer {
+  overflow-y:auto;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  overscroll-behavior: contain;
+}
+
+#contentImg{
+  will-change: transform;
+  backface-visibility: hidden;
+  touch-action: pinch-zoom;
+}
+
+
+	
+	
+	
 	
 </style>
 </head>
@@ -136,7 +228,7 @@ body { display:flex; height:100vh; overflow:hidden; }
 
 <div id="sidebar" role="navigation" aria-label="Chapters">
 
-  <!-- ★★ ADDED BUTTON HERE ★★ -->
+    <!-- ★★ ADDED BUTTON HERE ★★ -->
 <a href="https://smiitjeeche-art.github.io/sm-IIT-JEE-Chem-Data/SM store-chm/science 9 store.html" 
    class="buyBtn" target="_blank">BUY HARD COPY</a>
 
@@ -600,20 +692,7 @@ let data = {
 	 
 	 	  "C11_T11":[
   "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0001.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0002.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0003.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0004.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0005.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0006.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0007.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0008.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0009.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0010.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0011.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0012.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0013.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0014.jpg",
-  "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0015.jpg"
+ "https://g10educationalplatform-physics.github.io/SM-12-PHY-DUALNATURE/THEORY/11 DUAL NATURE OF RADIATION & MATTER 2025_page-0015.jpg"
     
      ],
 	 	  "C_Q":[
@@ -897,7 +976,8 @@ viewer.addEventListener('touchstart', e => {
         if(canvas){ pdfX = parseFloat(canvas.dataset.x||0); pdfY = parseFloat(canvas.dataset.y||0); canvas.style.pointerEvents = 'auto'; }
       }
     } else {
-      drag = true; startX = e.touches[0].pageX; startY = e.touches[0].pageY; startImgX = imgX; startImgY = imgY;
+  drag = zoomLevel > autoScale + 0.01;
+ startX = e.touches[0].pageX; startY = e.touches[0].pageY; startImgX = imgX; startImgY = imgY;
     }
   } else if(e.touches.length === 2){
     lastDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
@@ -909,8 +989,41 @@ viewer.addEventListener('touchstart', e => {
   }
 });
 
+
+
+
+
+
 viewer.addEventListener('touchmove', e => {
-  if(e.cancelable) e.preventDefault();
+
+  // ⭐ Always allow pinch zoom
+  if(e.touches.length === 2){
+    if(e.cancelable) e.preventDefault();
+  }
+
+  // ⭐ Allow normal scrolling when single finger & not zoomed
+  else if(!pdfMode.active && zoomLevel <= autoScale + 0.01){
+    return;
+  }
+
+  else if(pdfMode.active && Math.abs(pdfMode.scale - 1) < 0.01){
+    return;
+  }
+
+  else {
+    if(e.cancelable) e.preventDefault();
+  }
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
   if(e.touches.length === 1){
     if(pdfMode.active && pdfDrag){
       const canvas = document.getElementById('pdfPage');
@@ -949,9 +1062,23 @@ viewer.addEventListener('touchmove', e => {
       // ensure canvas receives pointer events when zoomed
       canvas.style.pointerEvents = 'auto';
     } else {
-      zoomLevel = Math.max(autoScale, Math.min(4, zoomLevel * zoomChange));
-      imgX = pinchStart.left + (pinchCenter.x * (zoomChange - 1));
-      imgY = pinchStart.top + (pinchCenter.y * (zoomChange - 1));
+	
+      let newZoom = Math.max(autoScale, Math.min(4, zoomLevel * zoomChange));
+
+// ⭐ Calculate pinch focus relative to image
+let dx = pinchCenter.x - imgX;
+let dy = pinchCenter.y - imgY;
+
+// ⭐ Adjust position so pinch stays fixed
+imgX -= dx * (newZoom / zoomLevel - 1);
+imgY -= dy * (newZoom / zoomLevel - 1);
+
+zoomLevel = newZoom;
+
+	  
+	  
+	  
+	  
       let vw = viewer.clientWidth, vh = viewer.clientHeight;
       let iw = img.naturalWidth * zoomLevel, ih = img.naturalHeight * zoomLevel;
       imgX = clamp(imgX, Math.min(0, vw - iw), 0); imgY = clamp(imgY, Math.min(0, vh - ih), 0);
@@ -1132,7 +1259,61 @@ function preloadNext() {
 }
 
 
+/* ===== BUY POPUP LOGIC (FIXED) ===== */
+/* ===== BUY POPUP LOGIC (DELAY + OUTSIDE CLICK) ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const popupOverlay = document.getElementById('buyPopupOverlay');
+  const closePopupBtn = document.getElementById('closePopup');
+  const popupBox = document.getElementById('buyPopup');
+
+  if (!popupOverlay || !closePopupBtn || !popupBox) return;
+
+  // Hide initially
+  popupOverlay.style.display = 'none';
+
+  // Show after 3 seconds
+  setTimeout(() => {
+    popupOverlay.style.display = 'flex';
+  }, 3000);
+
+  // Close via button
+  closePopupBtn.addEventListener('click', () => {
+    popupOverlay.style.display = 'none';
+  });
+
+  // Close when clicking outside popup box
+  popupOverlay.addEventListener('click', (e) => {
+    if (!popupBox.contains(e.target)) {
+      popupOverlay.style.display = 'none';
+    }
+  });
+
+  // Optional auto-close after 8 seconds (after it appears)
+  setTimeout(() => {
+    popupOverlay.style.display = 'none';
+  }, 14000); // 3s delay + 8s visible
+});
+
+
+
+
 </script>
+<!-- ===== BUY HARD COPY POPUP ===== -->
+<div id="buyPopupOverlay">
+  <div id="buyPopup">
+    <h2>📘 Buy Hard Copy Available</h2>
+    <p>
+      Get the complete printed book with premium quality pages.<br>
+      Click below to buy the hard copy.
+    </p>
+
+    <!-- 🔗 Replace the link later -->
+    <a href="https://smiitjeeche-art.github.io/sm-IIT-JEE-Chem-Data/SM store-chm/science 9 store.html" id="buyPopupBtn" target="_blank">BUY HARD COPY</a>
+
+    <button id="closePopup">Maybe Later</button>
+  </div>
+</div>
+
 </body>
 
 </html>
