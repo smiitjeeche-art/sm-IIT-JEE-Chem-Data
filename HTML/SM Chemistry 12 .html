@@ -51,7 +51,7 @@ body { display:flex; height:100vh; overflow:hidden; }
 #sidebar h2{font-size:20px;margin-bottom:10px;color:#38bdf8}
 .chapter{margin-bottom:10px;background:#334155;padding:10px;border-radius:8px;cursor:pointer}
 .subList{display:none;padding:10px;background:#475569;margin-top:5px;border-radius:6px}
-.subList div{Padding:6px;background:#64748b;margin:5px 0;border-radius:6px;cursor:pointer}
+.subList div{padding:6px;background:#64748b;margin:5px 0;border-radius:6px;cursor:pointer}
 .subList div:hover{background:#94a3b8}
 
 /* IMAGE / PDF WRAPPER */
@@ -215,7 +215,10 @@ body { display:flex; height:100vh; overflow:hidden; }
 }
 
 
-	
+	#bookmarkBtn.active{
+  background: gold;
+  color: black;
+}
 	
 	
 	
@@ -245,146 +248,234 @@ body { display:flex; height:100vh; overflow:hidden; }
 
 <div id="class11">
 
-	<div class="chapter">Chapter 1 HYDROCARBON
+	<div class="chapter">Chapter 1 Some Basic Concepts in Chemistry
     <div class="subList">
-        <div onclick="loadSub('C111_T111')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C111_Q111')"> QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C111_N111')">XXX</div>
-        <div onclick="loadSub('C111_A111')">XXX</div>
+        <div onclick="loadSub('C111_T111')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C111_Q111')"> CHALLENGE BANK </div>
+        <div onclick="loadSub('C111_N111')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C111_A111')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
+
+<div class="chapter">Chapter 2 Atomic Structure
+    <div class="subList">
+        <div onclick="loadSub('C211_T211')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C211_Q211')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C211_N211')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C211_A211')">CHAPTER AT A GLANCE (COMING SOON)</div>
+    </div>
+</div>
+
+<div class="chapter">Chapter 3 Chemical Bonding & Molecular Structure
+    <div class="subList">
+        <div onclick="loadSub('C311_T311')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C311_Q311')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C311_N311')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C311_A311')">CHAPTER AT A GLANCE (COMING SOON)</div>
+    </div>
+</div>
+
+<div class="chapter">Chapter 4 Chemical Thermodynamics
+    <div class="subList">
+        <div onclick="loadSub('C411_T411')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C411_Q411')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C411_N411')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C411_A411')">CHAPTER AT A GLANCE (COMING SOON)</div>
+    </div>
+</div>
+
+<div class="chapter">Chapter 5 Chemical Equilibrium
+    <div class="subList">
+        <div onclick="loadSub('C511_T511')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C511_Q511')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C511_N511')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C511_A511')">CHAPTER AT A GLANCE (COMING SOON)</div>
+    </div>
+</div>
+
+<div class="chapter">Chapter 6 Ionic Equilibrium
+    <div class="subList">
+        <div onclick="loadSub('C611_T611')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C611_Q611')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C611_N611')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C611_A611')">CHAPTER AT A GLANCE (COMING SOON)</div>
+    </div>
+</div>
+
+<div class="chapter">Chapter 7 General Organic Chemistry (GOC)
+    <div class="subList">
+        <div onclick="loadSub('C711_T711')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C711_Q711')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C711_N711')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C711_A711')">CHAPTER AT A GLANCE (COMING SOON)</div>
+    </div>
+</div>
+
+<div class="chapter">Chapter 8 Hydrocarbons
+    <div class="subList">
+        <div onclick="loadSub('C811_T811')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C811_Q811')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C811_N811')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C811_A811')">CHAPTER AT A GLANCE (COMING SOON)</div>
+    </div>
+</div>
+
+<div class="chapter">Chapter 9 Periodic Table
+    <div class="subList">
+        <div onclick="loadSub('C911_T911')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C911_Q911')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C911_N911')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C911_A911')">CHAPTER AT A GLANCE (COMING SOON)</div>
+    </div>
+</div>
+
+<div class="chapter">Chapter 10  s-block
+    <div class="subList">
+        <div onclick="loadSub('C1011_T1011')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C1011_Q1011')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C1011_N1011')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C1011_A1011')">CHAPTER AT A GLANCE (COMING SOON)</div>
+    </div>
+</div>
+
+<div class="chapter">Chapter 11 p-block 
+    <div class="subList">
+        <div onclick="loadSub('C1111_T1111')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C1111_Q1111')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C1111_N1111')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C1111_A1111')">CHAPTER AT A GLANCE (COMING SOON)</div>
+    </div>
+</div>
+
+
+<div class="chapter">Chapter 17 Redox Reaction
+    <div class="subList">
+        <div onclick="loadSub('C1711_T1711')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C1711_Q1711')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C1711_N1711')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C1711_A1711')">CHAPTER AT A GLANCE (COMING SOON)</div>
+    </div>
+</div>
+
+
 </div>   <!-- CLOSE CLASS 11 -->
 
 <div id="class12" style="display:none;">
 
 
 
-<div class="chapter">Chapter 1 SOLUTIONS
+<div class="chapter">Chapter 1 Solutions
     <div class="subList">
-        <div onclick="loadSub('C1_T1')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C1_Q1')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C1_N1')">NCERT</div>
-        <div onclick="loadSub('C1_A1')">NCERT SOLUTION</div>
+        <div onclick="loadSub('C112_T112')">ULTIMATE CONCEPTUAL NOTES</div>
+		<div onclick="loadSub('C112_Q112')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C112_N112')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C112_A112')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
 
-<div class="chapter">Chapter 2 ELECTROCHEMISTRY
+<div class="chapter">Chapter 2 Electrochemistry
     <div class="subList">
-        <div onclick="loadSub('C2_T2')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C2_Q2')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C2_N2')">NCERT</div>
-        <div onclick="loadSub('C2_A2')">NCERT SOLUTION</div>
+        <div onclick="loadSub('C212_T212')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C212_Q212')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C212_N212')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C212_A212')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
 
-<div class="chapter">Chapter 3 CHEMICAL KINETICS
+<div class="chapter">Chapter 3 Chemical kinetics
     <div class="subList">
-        <div onclick="loadSub('C3_T3')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C3_Q3')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C3_N3')">NCERT</div>
-        <div onclick="loadSub('C3_A3')">NCERT SOLUTION</div>
+        <div onclick="loadSub('C312_T312')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C312_Q312')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C312_N312')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C312_A312')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
 
-<div class="chapter">Chapter 4 SURFACE CHEMISTRY
+<div class="chapter">Chapter 4 d & f Block Elements
     <div class="subList">
-        <div onclick="loadSub('C4_T4')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C4_Q4')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C4_N4')">NCERT</div>
-        <div onclick="loadSub('C4_A4')">NCERT SOLUTION</div>
+        <div onclick="loadSub('C412_T412')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C412_Q412')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C412_N412')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C412_A412')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
 
-<div class="chapter">Chapter 5 THE p-BLOCK ELEMENTS (Groups 15–18)
+<div class="chapter">Chapter 5 coordination Compounds
     <div class="subList">
-        <div onclick="loadSub('C5_T5')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C5_Q5')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C5_N5')">NCERT</div>
-        <div onclick="loadSub('C5_A5')">NCERT SOLUTION</div>
+        <div onclick="loadSub('C512_T512')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C512_Q512')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C512_N512')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C512_A512')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
 
-<div class="chapter">Chapter 6 d- AND f-BLOCK ELEMENTS
+<div class="chapter">Chapter 6 Surface Chemistry
     <div class="subList">
-        <div onclick="loadSub('C6_T6')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C6_Q6')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C6_N6')">NCERT</div>
-        <div onclick="loadSub('C6_A6')">NCERT SOLUTION</div>
+        <div onclick="loadSub('C612_T612')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C612_Q612')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C612_N612')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C612_A612')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
 
-<div class="chapter">Chapter 7 COORDINATION COMPOUNDS
+<div class="chapter">Chapter 7 Solid State
     <div class="subList">
-        <div onclick="loadSub('C7_T7')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C7_Q7')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C7_N7')">NCERT</div>
-        <div onclick="loadSub('C7_A7')">NCERT SOLUTION</div>
+        <div onclick="loadSub('C712_T712')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C712_Q712')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C712_N712')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C712_A712')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
 
 
-<div class="chapter">Chapter 8 HALOALKANES AND HALOARENES
+<div class="chapter">Chapter 8 Haloalkanes and Haloarenes
     <div class="subList">
-        <div onclick="loadSub('C8_T8')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C8_Q8')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C8_N8')">NCERT</div>
-        <div onclick="loadSub('C8_A8')">NCERT SOLUTION</div>
+        <div onclick="loadSub('C812_T812')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C812_Q812')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C812_N812')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C812_A812')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
 
-<div class="chapter">Chapter 9 ALCOHOLS, PHENOLS AND ETHERS
+<div class="chapter">Chapter 9 Alcohol Phenol and Ether
     <div class="subList">
-        <div onclick="loadSub('C9_T9')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C9_Q9')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C9_N9')">NCERT</div>
-        <div onclick="loadSub('C9_A9')">NCERT SOLUTION</div>
+        <div onclick="loadSub('C912_T912')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C912_Q912')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C912_N912')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C912_A912')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
 
-<div class="chapter">Chapter 10 ALDEHYDES, KETONES AND CARBOXYLIC ACIDS
+<div class="chapter">Chapter 10 Aldehyde ketone and Carboxylic Acid
     <div class="subList">
-        <div onclick="loadSub('C10_T10')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C10_Q10')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C10_N10')">NCERT</div>
-        <div onclick="loadSub('C10_A10')">NCERT SOLUTION</div>
+        <div onclick="loadSub('C1012_T1012')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C1012_Q1012')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C1012_N1012')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C1012_A1012')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
 
-<div class="chapter">Chapter 11 AMINES
+<div class="chapter">Chapter 11 Amines
     <div class="subList">
-        <div onclick="loadSub('C11_T11')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C11_Q11')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C11_N11')">NCERT</div>
-        <div onclick="loadSub('C11_A11')">NCERT SOLUTION</div>
+        <div onclick="loadSub('C1112_T1112')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C1112_Q1112')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C1112_N1112')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C1112_A1112')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
 
-<div class="chapter">Chapter 12 BIOMOLECULES
+<div class="chapter">Chapter 12 Biomolecules
     <div class="subList">
-        <div onclick="loadSub('C12_T12')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C12_Q12')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C12_N12')">NCERT</div>
-        <div onclick="loadSub('C12_A12')">NCERT SOLUTION</div>
+        <div onclick="loadSub('C1212_T1212')">ULTIMATE CONCEPTUAL NOTES</div>
+        <div onclick="loadSub('C1212_Q1212')">CHALLENGE BANK</div>
+        <div onclick="loadSub('C1212_N1212')">CRASH COURSE (COMING SOON)</div>
+        <div onclick="loadSub('C1212_A1212')">CHAPTER AT A GLANCE (COMING SOON)</div>
     </div>
 </div>
 
-<div class="chapter">Chapter 13 POLYMERS
-    <div class="subList">
-        <div onclick="loadSub('C13_T13')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C13_Q13')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C13_N13')">NCERT</div>
-        <div onclick="loadSub('C13_A13')">NCERT SOLUTION</div>
-    </div>
-</div>
 
-<div class="chapter">Chapter 14 CHEMISTRY IN EVERYDAY LIFE
-    <div class="subList">
-        <div onclick="loadSub('C14_T14')">TOPPER’S SPECIAL NOTES</div>
-        <div onclick="loadSub('C14_Q14')">SUBJECTIVE QUESTION WITH SOLUTION</div>
-        <div onclick="loadSub('C14_N14')">NCERT</div>
-        <div onclick="loadSub('C14_A14')">NCERT SOLUTION</div>
-    </div>
-</div>
+
+
 </div>
 </div> <!-- CLOSE SIDEBAR -->
 
@@ -401,9 +492,14 @@ body { display:flex; height:100vh; overflow:hidden; }
   <button class="btn" id="prevBtn" aria-label="Previous">◀</button>
   <input type="number" id="pageInput" aria-label="Page number">
   <button class="btn" id="nextBtn" aria-label="Next">▶</button>
+  <button class="btn" id="bookmarkBtn">🔖</button>
+  <button class="btn" onclick="showBookmarks()">📑</button>
+  	 <button class="btn" id="solutionBtn" style="display:none;" 
+onclick="window.open('https://ai-question-and-its-solution-3oip.onrender.com')">🧠</button>
   <button class="btn" id="zoomIn" aria-label="Zoom in">⊕</button>
   <button class="btn" id="zoomOut" aria-label="Zoom out">⊖</button>
      <button class="btn" id="homeBtn" onclick="window.open('https://gten-educational-platform.github.io/Class-12/class 12 button.html')">🏠</button>
+
 </div>
 
 <script>
@@ -413,7 +509,11 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs
 /* ================= DATA (preserved) ================= */
 let data = {
 
-		  "C111_T111":[
+	 "C1211_C1211":[
+  
+    "https://g10educationalplatform-physics.github.io/SM-IIT-JEE/THERMOMETRY/Contents-THERMOMETRY  2026_page-0001.jpg"
+     ],
+		  "C811_T811":[
    "https://chemistry-g10ep.github.io/SM-IIT-JEE/Hydrocarbon-Theory/HYDROCARBON -theory-2026-1_page-0001.jpg",
   "https://chemistry-g10ep.github.io/SM-IIT-JEE/Hydrocarbon-Theory/HYDROCARBON -theory-2026-1_page-0002.jpg",
   "https://chemistry-g10ep.github.io/SM-IIT-JEE/Hydrocarbon-Theory/HYDROCARBON -theory-2026-1_page-0003.jpg",
@@ -778,6 +878,7 @@ let data = {
 };
 /* ================= STATE VARS ================= */
 let currentList = [], index = 0;
+let currentCode = "";   // ⭐ ADD THIS LINE
 let zoomLevel = 1, autoScale = 1;
 let img = document.getElementById('contentImg');
 let viewer = document.getElementById('viewer');
@@ -818,10 +919,25 @@ menuBtn.addEventListener('click', () => {
 
 /* ============== LOAD SUBLIST ============== */
 function loadSub(code){
+ currentCode = code;
+
+ // ⭐ SHOW SOLUTION BUTTON ONLY FOR CX_QX
+ const solutionBtn = document.getElementById("solutionBtn");
+ if(code.includes("_Q")){
+     solutionBtn.style.display = "inline-block";
+ }else{
+     solutionBtn.style.display = "none";
+ }
+ 
   currentList = data[code] || [];
   preloadFirst(currentList);   // ← new line
 
   index = 0;
+  // Restore last page if saved
+let savedPage = localStorage.getItem("page_" + code);
+if(savedPage){
+  index = parseInt(savedPage);
+}
   imgX = imgY = 0;
 
   exitPDF();
@@ -852,6 +968,7 @@ function preloadFirst(list){
 /* ============== LOAD PAGE (IMAGE or PDF) ============== */
 function loadPage(first=false){
   let url = currentList[index];
+   localStorage.setItem("page_" + currentCode, index); // ⭐ SAVE PAGE
   if(!url) return;
   if(url.toLowerCase().endsWith('.pdf')) { enterPDF(url); return; }
 
@@ -895,9 +1012,24 @@ if (!isDesktop && w >= 900 && w < 1200 && w > h) {
   // in case onload doesn't fire or is cached, still update
   pageNum.textContent = `Page ${index+1} / ${currentList.length}`;
   pageInput.value = index+1;
+  updateBookmarkIcon();   // ⭐ update bookmark highlight
   preloadNext();
 
 }
+function updateBookmarkIcon(){
+
+ let key = "bookmark_" + currentCode;
+
+ let bookmarks = JSON.parse(localStorage.getItem(key)) || [];
+
+ if(bookmarks && bookmarks.includes(index)){
+   bookmarkBtn.classList.add("active");
+ }else{
+   bookmarkBtn.classList.remove("active");
+ }
+
+}
+
 
 /* ============== CLAMP UTILITY ============== */
 function clamp(value, min, max){ return Math.min(Math.max(value, min), max); }
@@ -1286,7 +1418,63 @@ function showClass(cls) {
   document.getElementById(cls).style.display = "block";
 }
 
+function showBookmarks(){
 
+ if(!currentCode) return;
+
+ let key = "bookmark_" + currentCode;
+
+ let bookmarks = JSON.parse(localStorage.getItem(key)) || [];
+
+ if(bookmarks.length === 0){
+   alert("No bookmarks saved.");
+   return;
+ }
+
+ bookmarks.sort((a,b)=>a-b);
+
+ let popup = document.createElement("div");
+
+ popup.style.position = "fixed";
+ popup.style.top = "50%";
+ popup.style.left = "50%";
+ popup.style.transform = "translate(-50%,-50%)";
+ popup.style.background = "#222";
+ popup.style.color = "white";
+ popup.style.padding = "15px";
+ popup.style.borderRadius = "8px";
+ popup.style.zIndex = "9999";
+ popup.style.maxHeight = "300px";
+ popup.style.overflowY = "auto";
+
+ let html = "<h3>Bookmarks</h3>";
+
+ bookmarks.forEach(p=>{
+   html += `<div style="padding:5px;cursor:pointer" onclick="jumpToBookmark(${p})">Page ${p+1}</div>`;
+ });
+
+ html += `<div style="margin-top:10px;text-align:center">
+ <button onclick="this.parentElement.parentElement.remove()">Close</button>
+ </div>`;
+
+ popup.innerHTML = html;
+
+ document.body.appendChild(popup);
+
+}
+function jumpToBookmark(p){
+
+ index = p;
+
+ loadPage();
+
+ document.querySelectorAll("div").forEach(el=>{
+   if(el.style && el.style.zIndex === "9999"){
+     el.remove();
+   }
+ });
+
+}
 /* ===== BUY POPUP LOGIC (FIXED) ===== */
 /* ===== BUY POPUP LOGIC (DELAY + OUTSIDE CLICK) ===== */
 document.addEventListener('DOMContentLoaded', () => {
@@ -1323,7 +1511,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+let bookmarkBtn = document.getElementById("bookmarkBtn");
 
+bookmarkBtn.addEventListener("click", function(){
+
+ if(!currentCode) return;
+
+ let key = "bookmark_" + currentCode;
+
+ let bookmarks = JSON.parse(localStorage.getItem(key)) || [];
+
+ if(bookmarks.includes(index)){
+     bookmarks = bookmarks.filter(p => p !== index);
+     bookmarkBtn.classList.remove("active");
+ }else{
+     bookmarks.push(index);
+     bookmarkBtn.classList.add("active");
+ }
+
+ localStorage.setItem(key, JSON.stringify(bookmarks));
+});
 
 </script>
 <!-- ===== BUY HARD COPY POPUP ===== -->
@@ -1345,6 +1552,4 @@ document.addEventListener('DOMContentLoaded', () => {
 </body>
 
 </html>
-
-
 
