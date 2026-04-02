@@ -521,7 +521,7 @@ body { display:flex; height:100vh; overflow:hidden; }
 
 
 
-<div class="chapter">Chapter 1 Solutions
+<div class="chapter">Chapter 19 Solutions
 		<div class="chapterInfo">
 <span class="syllabus">JEE Main + Advanced</span>
 <span class="subject">Physical Chemistry</span>
@@ -534,7 +534,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 7 Solid State
+<div class="chapter">Chapter 20 Solid State
 		<div class="chapterInfo">
 <span class="syllabus">Only Advanced</span>
 <span class="subject">Physical Chemistry</span>
@@ -547,7 +547,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 2 Electrochemistry
+<div class="chapter">Chapter 21 Electrochemistry
 		<div class="chapterInfo">
 <span class="syllabus">JEE Main + Advanced</span>
 <span class="subject">Physical Chemistry</span>
@@ -560,7 +560,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 3 Chemical kinetics
+<div class="chapter">Chapter 22 Chemical kinetics
 		<div class="chapterInfo">
 <span class="syllabus">JEE Main + Advanced</span>
 <span class="subject">Physical Chemistry</span>
@@ -573,7 +573,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 3 Surface Chemistry
+<div class="chapter">Chapter 23 Surface Chemistry
 		<div class="chapterInfo">
 <span class="syllabus">Only Advanced</span>
 <span class="subject">Physical Chemistry</span>
@@ -586,7 +586,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 3 General Principle of Extraction of Metal
+<div class="chapter">Chapter 24 General Principle of Extraction of Metal
 		<div class="chapterInfo">
 <span class="syllabus">Only Advanced</span>
 <span class="subject">Inorganic Chemistry</span>
@@ -599,7 +599,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 4 d & f Block Elements
+<div class="chapter">Chapter 25 d & f Block Elements
 		<div class="chapterInfo">
 <span class="syllabus">JEE Main + Advanced</span>
 <span class="subject">Inorganic Chemistry</span>
@@ -612,7 +612,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 5 Coordination Compounds
+<div class="chapter">Chapter 26 Coordination Compounds
 		<div class="chapterInfo">
 <span class="syllabus">JEE Main + Advanced</span>
 <span class="subject">Inorganic Chemistry</span>
@@ -628,7 +628,7 @@ body { display:flex; height:100vh; overflow:hidden; }
 
 
 
-<div class="chapter">Chapter 8 Halogen Containing Compounds
+<div class="chapter">Chapter 27 Halogen Containing Compounds
 		<div class="chapterInfo">
 <span class="syllabus">JEE Main + Advanced</span>
 <span class="subject">Organic Chemistry</span>
@@ -641,7 +641,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 9 Alcohol Phenol and Ether
+<div class="chapter">Chapter 28 Alcohol Phenol and Ether
 		<div class="chapterInfo">
 <span class="syllabus">JEE Main + Advanced</span>
 <span class="subject">Organic Chemistry</span>
@@ -654,7 +654,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 10 Aldehyde & ketone 
+<div class="chapter">Chapter 29 Aldehyde & ketone 
 		<div class="chapterInfo">
 <span class="syllabus">JEE Main + Advanced</span>
 <span class="subject">Organic Chemistry</span>
@@ -667,7 +667,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 10 Carboxylic acids and Their derivatives 
+<div class="chapter">Chapter 30 Carboxylic acids and Their derivatives 
 		<div class="chapterInfo">
 <span class="syllabus">JEE Main + Advanced</span>
 <span class="subject">Organic Chemistry</span>
@@ -680,7 +680,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 11 Nitrogen containing Compounds
+<div class="chapter">Chapter 31 Nitrogen containing Compounds
 		<div class="chapterInfo">
 <span class="syllabus">JEE Main + Advanced</span>
 <span class="subject">Organic Chemistry</span>
@@ -693,7 +693,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 11 Polymers
+<div class="chapter">Chapter 32 Polymers
 		<div class="chapterInfo">
 <span class="syllabus">Not In syllabus</span>
 <span class="subject">Organic Chemistry</span>
@@ -706,7 +706,7 @@ body { display:flex; height:100vh; overflow:hidden; }
     </div>
 </div>
 
-<div class="chapter">Chapter 12 Biomolecules
+<div class="chapter">Chapter 33 Biomolecules
 		<div class="chapterInfo">
 <span class="syllabus">JEE Main + Advanced</span>
 <span class="subject">Organic Chemistry</span>
@@ -1233,6 +1233,53 @@ if(savedPage){
 
 
 
+
+
+	function loadSub(code){
+  currentCode = code;
+
+  // Show solution button only for _Q
+  const solutionBtn = document.getElementById("solutionBtn");
+  if(code.includes("_Q")){
+    solutionBtn.style.display = "inline-block";
+  } else {
+    solutionBtn.style.display = "none";
+  }
+
+  currentList = data[code] || [];
+  preloadFirst(currentList);
+
+  index = 0;
+
+  // Restore last page if saved
+  let savedPage = localStorage.getItem("page_" + code);
+  if(savedPage){
+    index = parseInt(savedPage);
+  }
+
+  imgX = imgY = 0;
+
+  exitPDF();
+  loadPage(true); // ⭐ Load the page first
+
+  controls.style.display = 'flex';
+  if (window.innerWidth <= 1180) sidebar.classList.remove('open');
+
+  // ⭐ Show popup AFTER page loads (non-blocking)
+  if(code.includes("_Q")){
+    setTimeout(() => {
+      alert("Click the brain icon 🧠 to open the solution finder.\n\nEnter your question code or type your question to get the solution instantly.");
+    }, 200); // 200ms delay is enough for page to render
+  }
+}
+
+
+
+
+
+
+
+	
 
 
 
